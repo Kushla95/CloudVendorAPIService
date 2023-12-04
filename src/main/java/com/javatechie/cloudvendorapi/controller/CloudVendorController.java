@@ -30,15 +30,12 @@ public class CloudVendorController {
 		  return "Cloud Vendor Created Successfully"; 
 		  
 	  }
+
+	 @PutMapping
+	  public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor){
+		  this.cloudVendor=cloudVendor;
+		  return "Cloud Vendor Updated Successfully";
+	  }
 	  
-		/*
-		 * @PutMapping("/{vendorId}") public CloudVendor updateVendor(@PathVariable
-		 * String vendorId, @RequestBody CloudVendor cloudVendor) { // Implement logic
-		 * to update an existing vendor return your logic to update a vendor ; }
-		 * 
-		 * @DeleteMapping("/{vendorId}") public void deleteVendor(@PathVariable String
-		 * vendorId) { // Implement logic to delete an existing vendor // For example,
-		 * you can use a service to delete data from a database }
-		 */
-	 
+	
 }
